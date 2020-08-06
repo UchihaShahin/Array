@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main()
+{
+    int i, n, num, j=0 , a=0, array[100], position[100],count=0;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the elements: ");
+    for(i = 0; i < n; i = i + 1)
+    {
+        scanf("%d", &array[i]);
+    }
+        printf("Search: ");
+        scanf("%d", &num);
+    for(i = 0; i < n; i++)
+
+        {
+            if(array[i] == num)
+            {
+                position[j] = i+1;
+                j++;
+                count++;
+
+            }
+        }
+    if (array[i]==num){
+    printf("%d is found %d times at ",num,count);
+    }
+    for(a=0;a<j;a++)
+    {
+
+        printf("location ");
+        printf("%d ",position[a]);
+        if (position[a]<=count){
+        printf("and ");
+        }
+    }
+    if (array[i]!=num){
+        printf("No such record found\n");
+    }
+
+    return 0;
+}
